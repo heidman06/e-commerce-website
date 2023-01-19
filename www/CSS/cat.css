@@ -1,0 +1,137 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.col {
+    width: 300px;
+    height: 400px;
+    margin: 0 20px;
+    margin-top: 50px;
+    box-shadow: 10px 10px 10px 1px grey;
+}
+
+.col:hover {
+    box-shadow: 0px 0px 10px 1px grey;
+    animation: shadow .5s ease-in-out;
+}
+
+@keyframes shadow {
+    from {
+        box-shadow: 10px 10px 10px 1px grey;
+    }
+
+    to {
+        box-shadow: 0px 0px 10px 1px grey;
+    }
+}
+
+.col a {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.div-img img {
+    width: 100%;
+}
+
+.div-img {
+    padding: 5px 0;
+    background-color: white;
+}
+
+.div-less-btn {
+    height: 350px;
+}
+
+.div-desc p {
+    text-align: justify;
+    width: 90%;
+    margin: auto;
+    font-family: 'Roboto', serif;
+}
+
+.div-desc p:nth-child(1) {
+    font-size: 1.1em;
+}
+
+.div-desc p:nth-child(2) {
+    margin-top: 5px;
+    color: #888888;
+}
+
+.price {
+    font-family: 'Roboto', serif;
+    font-weight: 500;
+    color: black;
+}
+
+@keyframes gradient {
+    0% {
+        background: radial-gradient(circle at center, rgba(150, 255, 200, 0) 0%, #fff 0%, #fff 100%);
+    }
+
+    25% {
+        background: radial-gradient(circle at center, rgba(150, 255, 200, 0.3) 24%, #fff 25%, #fff 100%);
+    }
+
+    50% {
+        background: radial-gradient(circle at center, rgba(150, 255, 200, 0.5) 49%, #fff 50%, #fff 100%);
+    }
+
+    75% {
+        background: radial-gradient(circle at center, rgba(150, 255, 200, 0.8) 74%, #fff 75%, #fff 100%);
+    }
+
+    100% {
+        color: #fff;
+        background: radial-gradient(circle at center, rgb(150, 255, 200) 99%, #fff 100%, #fff 100%);
+    }
+}
+
+.btn-buy {
+    border: none;
+    background-color: rgba(253, 225, 46, 0.813);
+    box-shadow: 2px 2px 3px 1px gray;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    left: 150px;
+    bottom: 6px;
+}
+
+.btn-buy:active {
+    animation: gradient 75ms;
+    background: lightgreen;
+    box-shadow: none;
+}
+
+.btn-buy i {
+    font-size: 2em;
+    color: black;
+}
+
+.div-btn p {
+    position: relative;
+    left: 25px;
+    bottom: 5px;
+    display: inline;
+    font-size: 1.2em;
+    color: rgb(50, 50, 50);
+    position: relative;
+}
+
+.div-desc {
+    margin-top: 10px;
+}
+
+@media screen and (max-width : 1150px) {
+    .row {
+        justify-content: center;
+    }
+}
