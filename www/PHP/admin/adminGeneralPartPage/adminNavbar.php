@@ -14,8 +14,13 @@
                 </a>
             </li>
             <li class="nav-link li-nav-link">
-                <a href="order.php"><i class="fa-solid fa-truck-fast" id="contact-icone"></i>
-                    <p class="nav-p">Order</p>
+                <a href="fournisseurAdding.php"><i class="fa-solid fa-truck-fast" id="contact-icone"></i>
+                    <p class="nav-p">Add Fournisseur</p>
+                </a>
+            </li>
+            <li class="nav-link li-nav-link">
+                <a href="contactFournisseur.php"><i class="fa-solid fa-truck-fast" id="contact-icone"></i>
+                    <p class="nav-p">Contact a Fournisseur</p>
                 </a>
             </li>
             <li class="nav-link li-nav-link" id="last-nav-link">
