@@ -56,7 +56,7 @@ $bag = new bag($DB);
                 </a>
                 <div class="div-btn">
                     <p class="price"><?php echo number_format($product->price_tax_product, 2, ',', ' '); ?> €</p>
-                    <a href="addBag.php?id_product=<?php var_dump($product->id_product) ?>"><button class="btn btn-buy" id="change-btnA1"><i class="fa-solid fa-cart-plus"></i></button></a>
+                    <a href="addBag.php?id_product=<?php $product->id_product ?>"><button class="btn btn-buy" id="change-btnA1"><i class="fa-solid fa-cart-plus"></i></button></a>
                 </div>
             </div>
         <?php endforeach ?>
