@@ -44,7 +44,7 @@ if (isset($_GET['del'])) {
             <div class="l-side">
                 <div class="your-bag">YOUR CART</div>
                 <?php $id_products = array_keys($_SESSION['bag']);
-                if (empty($id_products) || isset($_SESSION['bag'])) {
+                if (empty($id_products)) {
                     $products = array();
                     echo '<p id="p_empty">The cart is empty</p>';
                 } else {
@@ -73,8 +73,6 @@ if (isset($_GET['del'])) {
                 <?php endforeach; ?>
                 <input class="sumbit-form" type="submit" value="Reload quantity">
             </div>
-            <?php
-            if (!empty($id_products) || isset($_SESSION['bag'])) { ?>
                 <div class="r-side">
                     <div class="r-overview">
                         <div class="r-top">
@@ -115,7 +113,6 @@ if (isset($_GET['del'])) {
                             </div>
                         </div>
                     <?php
-                }
 
                 if (isset($_POST['buttonValidate']) && !empty($id_products) && isset($_SESSION["username"])) {
 
