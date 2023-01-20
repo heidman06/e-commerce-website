@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: table;
+  width: 100%;
+}
+
+footer {
+  display: table-row;
+  height: 30px;
+  background-color: #cac9c9;
+}
+
+.footer-p {
+  color: white;
+  text-align: right;
+  margin: auto;
+  position: relative;
+  top: 5px;
+  right: 10px;
+}
+
+.footer-p a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-p a:hover{
+  color: black;
+  transition: all .3s ease-in-out;
+}
+
+.prefooter {
+  height: 50px;
+  width: 100%;
+}
+
+@media screen and (max-width : 400px) {
+
+  footer {
+      height: 40px;
+    }
+}

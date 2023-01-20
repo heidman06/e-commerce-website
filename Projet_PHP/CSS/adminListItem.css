@@ -1,0 +1,223 @@
+.container {
+    width: 95%;
+    margin: auto;
+    margin-top: 30px;
+    box-shadow: 0 0 5px 1px #e6e6e6;
+    padding-bottom: 20px;
+    font-family: 'Roboto', Arial;
+}
+
+.list-title {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 500;
+    background-color: #e0dddd;
+    border-bottom: 1px solid gray;
+}
+
+.div-item {
+    background-color: white;
+    width: 100%;
+    height: 140px;
+    display: flex;
+    padding: 10px;
+}
+
+.div-img {
+    display: flex;
+}
+
+.div-desc {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 0 30px;
+    width: 100%;
+}
+
+.div-name-available {
+    width: 70%;
+    min-width: 250px;
+    text-transform: uppercase;
+}
+
+.name {
+    margin-bottom: 10px;
+}
+
+.a-name {
+    text-decoration: none;
+    color: black;
+}
+
+.a-name:hover {
+    text-decoration: underline;
+}
+
+.available {
+    color: rgba(0, 128, 0, 0.55);
+}
+
+.div-edit-remove {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.div-edit {
+    width: 50%;
+    text-align: center;
+}
+
+.div-edit a {
+    text-decoration: none;
+    color: black;
+}
+
+.div-edit i {
+    padding: 5px;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+.div-edit i:hover {
+    transition: all .1s linear;
+    font-size: 1.6em;
+    color: black;
+}
+
+.a-trash-can {
+    color: black;
+    text-decoration: none;
+}
+
+.div-remove {
+    width: 50%;
+    text-align: center;
+    color: black;
+}
+
+.div-remove i {
+    padding: 5px;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin: 20px 0;
+    color: black;
+}
+
+.div-remove i:hover {
+    transition: all .1s linear;
+    font-size: 1.6em;
+    color: red;
+}
+
+.bottom-line {
+    height: 1px;
+    width: calc(100% - 20px);
+    margin: auto;
+    background-color: gray;
+}
+
+.add-item {
+    width: calc(100% - 70px);
+    text-align: right;
+    margin: 20px 0;
+}
+
+.add-item button {
+    padding: 10px 20px;
+    color: black;
+    border: none;
+    background-color: rgba(253, 225, 46, 0.813);
+    box-shadow: 2px 2px 3px 1px #cacaca;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.add-item button:hover {
+    transition: all .1s linear;
+    box-shadow: 2px 2px 3px 1px gray;
+}
+
+.btn-add-quantity {
+    margin-top: 10px;
+    padding: 5px 10px;
+    color: black;
+    border: none;
+    background-color: rgba(253, 225, 46, 0.813);
+    box-shadow: 2px 2px 3px 1px #cacaca;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn-add-quantity:hover {
+    transition: all .1s linear;
+    box-shadow: 2px 2px 3px 1px gray;
+}
+
+.add-quantity span {
+    text-transform: none;
+    margin-left: 10px;
+    font-size: 0.8em;
+    color: gray;
+}
+
+@keyframes gradient {
+    0% {
+        background: radial-gradient(circle at center, rgba(150, 255, 200, 0) 0%, #fff 0%, #fff 100%);
+    }
+
+    25% {
+        background: radial-gradient(circle at center, rgba(150, 255, 200, 0.3) 24%, #fff 25%, #fff 100%);
+    }
+
+    50% {
+        background: radial-gradient(circle at center, rgba(150, 255, 200, 0.5) 49%, #fff 50%, #fff 100%);
+    }
+
+    75% {
+        background: radial-gradient(circle at center, rgba(150, 255, 200, 0.8) 74%, #fff 75%, #fff 100%);
+    }
+
+    100% {
+        color: #fff;
+        background: radial-gradient(circle at center, rgb(150, 255, 200) 99%, #fff 100%, #fff 100%);
+    }
+}
+
+.btn-add-quantity:active {
+    animation: gradient 75ms;
+    background: lightgreen;
+    box-shadow: none;
+}
+
+@media screen and (max-width : 580px) {
+    .container {
+        width: 100%;
+    }
+
+    .div-item {
+        display: block;
+    }
+
+    img {
+        display: none;
+    }
+
+    .div-desc {
+        display: block;
+    }
+
+    .div-name-available {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .div-desc {
+        margin: 0;
+    }
+}

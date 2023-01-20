@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@100;200;300;400;500;600;700;800;900&family=Merriweather:wght@400;700;900&family=Oleo+Script&family=Roboto:wght@100;400;500;900&display=swap');
+
+.logo {
+    font: 500 100px/1.2 'Chivo Mono', serif;
+    text-transform: uppercase;
+    letter-spacing: -.3px;
+    word-spacing: -10px;
+    color: #2b2b2b;
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: 2.65em;
+}
+
+#logo-span {
+    font-size: 0.5em;
+    color: rgba(0, 0, 0, 0.5);
+    text-shadow: none;
+    margin-left: 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #cac9c9;
+    color: black;
+    height: 65px;
+}
+
+.nav-links {
+    display: flex;
+    position: relative;
+    top: 3px;
+}
+
+.nav-link {
+    padding: 0 10px;
+    font-family: 'Roboto', Arial;
+    font-weight: 500;
+
+}
+
+.nav-link>a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.35em;
+}
+
+.burger {
+    display: none;
+}
+
+#bag-icone {
+    display: none;
+}
+
+#contact-icone {
+    display: none;
+}
+
+#home-icone {
+    display: none;
+}
+
+#signIn-icone {
+    display: none;
+}
+
+#signUp-icone {
+    display: none;
+}
+
+
+/* small devices */
+@media screen and (max-width : 1260px) {
+
+    @keyframes slidebar-nav {
+        from {
+            right: -100px;
+            opacity: 0;
+        }
+
+        to {
+            right: 0;
+            opacity: 1;
+        }
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        height: calc(100vh - 85px);
+        position: absolute;
+        top: 80px;
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 20px 0 0 20px;
+        backdrop-filter: blur(5px);
+    }
+
+    .nav-link i {
+        margin: auto;
+    }
+
+    .show-nav .nav-links {
+        animation-duration: .5s;
+        animation-name: slidebar-nav;
+        display: flex;
+        right: 0;
+        width: 100px;
+        z-index: 99;
+        position: absolute;
+        padding-left: 0;
+    }
+
+    #nav-first-a {
+        margin-top: 20px;
+    }
+
+    .nav-link>a {
+        display: flex;
+        margin: 5px 0;
+        padding: 1rem 0;
+        font-size: 1.6rem;
+        color: white;
+    }
+
+    .nav-link a:hover {
+        font-size: 2em;
+        transition: all .5s ease-in-out;
+    }
+
+    .burger {
+        display: block;
+        position: relative;
+        padding: 0;
+        width: 45px;
+        height: 45px;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+
+    }
+
+    .bar {
+        display: block;
+        width: 45px;
+        height: 4px;
+        background-color: black;
+        border-radius: 3px;
+        transition: all .5s ease-in-out;
+
+    }
+
+    .show-nav .bar {
+        width: 0;
+        background: transparent;
+
+    }
+
+    .bar::before,
+    .bar::after {
+        content: "";
+        width: 45px;
+        height: 4px;
+        position: absolute;
+        left: 0;
+        background-color: black;
+        border-radius: 3px;
+        transition: all .5s ease-in-out;
+    }
+
+    .bar::before {
+        transform: translateY(-12px);
+    }
+
+    .show-nav .bar::before {
+        transform: rotate(45deg);
+    }
+
+    .bar::after {
+        transform: translateY(12px);
+    }
+
+    .show-nav .bar::after {
+        transform: rotate(-45deg);
+    }
+
+    #bag-icone {
+        display: block;
+    }
+
+    #contact-icone {
+        display: block;
+    }
+
+    #home-icone {
+        display: block;
+    }
+
+    #signIn-icone {
+        display: block;
+    }
+
+    #signUp-icone {
+        display: block;
+    }
+
+    .nav-p {
+        display: none;
+    }
+
+}
+
+/* medium devices */
+@media screen and (min-width : 1260px) {
+
+    .nav-link>a::after {
+        display: block;
+        content: "";
+        opacity: 0;
+        height: 1.5px;
+        background-color: black;
+        transition: .4s;
+        margin-top: 5px;
+    }
+
+    #last-nav-link>a::after {
+        display: none;
+    }
+
+    .nav-link:hover>a::after {
+        opacity: 1;
+        margin-top: 1.5px;
+    }
+
+    #last-nav-link {
+        position: relative;
+        bottom: 4px;
+        color: black;
+        border: none;
+        background-color: rgba(253, 225, 46, 0.813);
+        box-shadow: 3px 3px 3px 1px gray;
+        border-radius: 10px;
+        padding: .3em .6em;
+    }
+
+    #last-nav-link:hover {
+        padding-right: .7em;
+        padding-left: .7em;
+        transition: all .5s ease-in-out;
+    }
+
+
+}
+
+/* very small device */
+@media screen and (max-width : 580px) {
+    .logo {
+        margin-left: 0;
+        font-size: 2em;
+    }
+    #logo-span {
+        display: block;
+    }
+}
+
+/* Galaxie Fold device */
+@media screen and (max-width : 375px) {
+    .logo {
+        margin-left: 0;
+        font-size: 1.5em;
+    }
+
+    #logo-span {
+        display: block;
+    }
+}

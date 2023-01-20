@@ -1,0 +1,249 @@
+html {
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    margin: 50px 0;
+    display: flex;
+}
+
+.l-img {
+    margin-top: 25px;
+    width: 400px;
+    height: 300px;
+}
+
+.l-div-price {
+    color: black;
+    margin: 10px;
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 50px;
+}
+
+.l-div-price p{
+    display: inline;
+    font-family: 'Roboto', serif;
+    font-weight: 500;
+}
+
+span {
+    color: rgba(0, 0, 0, 0.6);
+    font-family: 'Roboto', serif;
+    font-size: .9em;
+}
+
+.l-btn {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btn {
+    font-family: 'Merriweather', serif;
+    font-size: .9em;
+    letter-spacing: -.5px;
+    padding: 7px 25px;
+    border-radius: 15px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 2px 2px 3px 1px #cacaca
+}
+
+@keyframes gradient {
+    0% {
+        background: radial-gradient(circle at center, rgba(150, 255, 200, 0) 0%, #fff 0%, #fff 100%);
+    }
+
+    25% {
+        background: radial-gradient(circle at center, rgba(150, 255, 200, 0.3) 24%, #fff 25%, #fff 100%);
+    }
+
+    50% {
+        background: radial-gradient(circle at center, rgba(150, 255, 200, 0.5) 49%, #fff 50%, #fff 100%);
+    }
+
+    75% {
+        background: radial-gradient(circle at center, rgba(150, 255, 200, 0.8) 74%, #fff 75%, #fff 100%);
+    }
+
+    100% {
+        color: #fff;
+        background: radial-gradient(circle at center, rgb(150, 255, 200) 99%, #fff 100%, #fff 100%);
+    }
+}
+
+.l-btn .btn-buy:active {
+    animation: gradient 75ms;
+    background: lightgreen;
+    box-shadow: none;
+}
+
+.l-btn .btn-see-bag:active {
+    animation: gradient 75ms;
+    background: lightgreen;
+    box-shadow: none;
+}
+
+.l-btn .btn-see-bag{
+    background-color: rgb(255, 180, 0);
+    font-family: 'Roboto', serif;
+}
+
+.l-btn .btn-buy {
+    background-color: rgb(255, 220, 0);
+    font-family: 'Roboto', serif;
+}
+
+.m-bar {
+    height: 350px;
+    padding: 0 2px;
+    border-radius: 5px;
+    background-color: gray;
+    box-shadow: 5px 0 10px 1px #cacaca;
+}
+
+.r-side{
+    padding: 0 30px;
+}
+
+.r-side h2 {
+    font-family: 'Roboto', serif;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.r-side h3 {
+    color: rgb(40, 40, 40);
+    margin-top: 20px;
+    font-family: 'Roboto', serif;
+    font-weight: 500;
+}
+
+.r-side p {
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    color: #484848;
+    margin: 5px;
+}
+
+.r-div-desc {
+    margin-top: 20px;
+}
+
+.table-feature {
+    margin-top: 10px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-feature tbody tr:nth-child(even) {
+    background-color: #cacaca;
+}
+
+.table-feature tbody tr:nth-child(odd) {
+    background-color: #f5f5f5;
+}
+
+.table-feature th {
+    color: black;
+    font-family: 'Roboto', serif;
+    font-weight: 500;
+    padding-left: 15px;
+    text-align: left;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.table-feature td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 80%;
+    padding-right: 10px;
+    color: #484848;
+    font-family: 'Roboto', serif;
+    font-weight: 500;
+}
+
+.img-zoom-container {
+    position: relative;
+}
+
+.img-zoom-lens {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    /*set the size of the lens:*/
+    width: 180px;
+    height: 135px;
+}
+
+.img-zoom-result {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 9999999px;
+    border: 1px solid #d4d4d4;
+    /*set the size of the result div:*/
+    width: 400px;
+    height: 300px;
+}
+
+.img-zoom-container:hover {
+    cursor: crosshair;
+}
+
+.img-zoom-container:hover .img-zoom-result{
+    top: 25px;
+    left: 430px;
+    z-index: 50;
+}
+
+#myimage {
+    width: 400px;
+    height: 300px;
+}
+
+@media screen and (max-width : 820px) {
+    .container {
+        display: block;
+    }
+
+    .m-bar {
+        display: none;
+    }
+
+    h2 {
+        margin-top: 20px;
+    }
+
+    .img-zoom-container {
+        position: none;
+    }
+    
+    .img-zoom-lens {
+        display: none;
+    }
+
+    .img-zoom-result {
+        display: none;
+    }
+
+    .l-img {
+        margin: auto;
+    }
+}
+
+@media screen and (max-width : 410px) {
+    .l-img {
+        width: 250px;
+        height: 187.5px;
+        margin: auto;
+    }
+
+    #myimage {
+        width: 250px;
+        height: 187.5px;
+    }
+}
