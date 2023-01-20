@@ -3,7 +3,7 @@ class DB
 {
     private $host = 'localhost';
     private $username = 'u613553070_heidman06';
-    private $password = 'Rachid1966*';
+    private $password = 'Paulsinnah123';
     private $database = 'u613553070_phpProject';
     private $db;
 
